@@ -1,0 +1,104 @@
+.logo{
+    max-width: 100px;
+}
+
+.header{
+    background:#7ED957 ;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header a{
+    padding-right:100px;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 20px;
+    color: #278502;
+}
+
+/*#7ED957 cor de verde*/
+.banner img{
+    max-width: 100%;
+}
+
+.banner{
+    margin: 0px;
+}
+
+.texto_principal{
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.texto_principal h1{
+    color: #278502;
+}
+
+.card_area > div{
+    margin-bottom: 10px;
+}
+
+.card_area img{
+    width: 100%;
+    height: 216px;
+}
+
+.infos h2{
+    color: #278502;
+    font-size: 1.5em;
+}
+
+.infos{
+    margin-top: 20px;
+}
+
+.grid_card1{
+    background-color: #b7d3ab;
+    padding: 20px;
+    min-height: 220px;
+    margin-bottom: 20px;
+}
+
+.grid_card1 img{
+    width: 100%;
+}
+
+.footer{
+    background-image: url(img/footer.png);
+    background-size: cover;
+    background-position: 0px -300px;
+    color: white;
+    padding: 30px;
+}
+
+/*medias queries*/
+
+@media screen and (max-width:600px){
+    .logo{
+        width: 50px;
+    }
+
+
+    .menu1{
+        padding-left:100px;
+        font-size: 1.0em;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width:768px){
+    .logo{
+        width: 70px;
+    }
+
+    .header a{
+        padding-right:5px;
+        font-size: 1.0em;
+        text-align: center;
+        padding-top: 20px;
+        color: #278502;
+    }
+}
