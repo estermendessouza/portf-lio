@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+.title{
+    font-family: 'Raleway', sans-serif;
+    color: #AB708B;
+}
+
+.modal-body img{
+    width: 100%;
+}
+
+.header{
+    background-color: #CB8BA8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.header_area{
+    padding: 20px;
+}
+
+.menu_area{
+    margin-top: 30px
+
+}
+
+#btnGroupAddon svg{
+    fill: #AB708B;
+}
+
+#btnGroupAddon{
+    cursor: pointer;
+}
+
+.nav a{
+    color: #FDE9EB;
+}
+
+.nav a:hover{
+    background-color: #AB708B;
+    color: #FDE9EB;
+}
+
+.active{
+    background-color: #AB708B !important;
+}
+
+.img-fluid{
+    height: 300px;
+}
+
+.redes_sociais a{
+    padding: 10px;
+    color: #CB8BA8;
+}
+
+.redes_sociais a:hover{
+    color: #AB708B;
+}
+
+.main .card{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.main .btn{
+    color: #CB8BA8;
+}
+
+.card img{
+    width: 100%;
+}
+
+.btn{
+    margin-bottom: 10px;
+}
+
+.rounded{
+    width: 200px;
+    height: 200px;
+}
+
+.github{
+    background-color:#FDE9EB;
+}
+
+.footer{
+    margin-top: 20px;
+    background-color: #CB8BA8;
+    color: #FDE9EB;
+}
+
+.footer_area{
+    margin-top: 30px
+}
