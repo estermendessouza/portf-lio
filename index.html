@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Jogo da cobrinha</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+
+<body>
+    <canvas id="stage" width="400" height="400"></canvas>
+    <script type="text/javascript">
+        window.onload = function() {
+            var stage = document.getElementById('stage');
+            var ctx = stage.getContext("2d");
+            document.addEventListener("keydown", keyPush);
+            setInterval(game, 100);
+            const velocidade = 1;
+            var vx = 0;
+            var vy = 0;
+            var px = 10;
+            var py = 10;
+            var tamanho = 20;
+            var quantidade = 20;
+            var pontoVermelhoX = 15;
+            var pontoVermelhoY = 15;
+            var trail = []; //rastro vazio
+            tail = 5;
+
+            function game() {
+                px += vx;
+                py += vy;
+                if (px < 0) {
+                    px = quantidade - 1;
+                }
+                if (px > quantidade - 1) {
+                    px = 0;
+                }
+                if (py < 0) {
+                    py = quantidade - 1;
+                }
+                if (py > quantidade - 1) {
+                    py = 0;
+                }
+                //cor de fundo
+                ctx.fillStyle = "black";
+                ctx.fillRect(0, 0, stage.clientWidth, stage.height);
+
+                //cor da maça
+                ctx.fillStyle = "pink";
+                ctx.fillRect(pontoVermelhoX * tamanho, pontoVermelhoY * tamanho, tamanho, tamanho);
+
+                //cor da cobra
+                ctx.fillStyle = "red";
+                for (var i = 0; i < trail.length; i++) {
+                    ctx.fillRect(trail[i].x * tamanho, trail[i].y * tamanho, tamanho, tamanho);
+                    if (trail[i].x == px && trail[i].y == py) {
+                        vx = vy = 0;
+                        tail = 5;
+                    }
+                }
+                trail.push({
+                    x: px,
+                    y: py
+                })
+                while (trail.length > tail) {
+                    trail.shift();
+                }
+                if (pontoVermelhoX == px && pontoVermelhoY == py) {
+                    tail++;
+                    pontoVermelhoX = Math.floor(Math.random() * quantidade);
+                    pontoVermelhoY = Math.floor(Math.random() * quantidade);
+
+                }
+            }
+
+            function keyPush(event) {
+                switch (event.keyCode) {
+                    case 37:
+                        vx = -velocidade;
+                        vy = 0;
+                        break;
+
+                    case 38:
+                        vx = 0;
+                        vy = -velocidade;
+                        break;
+
+                    case 39:
+                        vx = velocidade;
+                        vy = 0;
+                        break;
+
+                    case 40:
+                        vx = 0;
+                        vy = velocidade;
+                        break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
